@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Muse Vietnamese Font Fix",
+  "version": "1.0.0",
+  "description": "Sửa lỗi hiển thị dấu tiếng Việt bị lệch nét trên Muse.ai và thanh bên mở rộng Muse của Meta.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.muse.ai/*", "*://*.meta.ai/*", "*://*.meta.com/*"],
+      "css": ["fix-font.css"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ]
+}
